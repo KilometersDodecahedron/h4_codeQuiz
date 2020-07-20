@@ -1,0 +1,39 @@
+#results-screen, #quizElements, #nextQuestionButton, #answerReveal {
+    display: none;
+}
+
+.container {
+    background-color: sandybrown;
+}
+
+button {
+    margin-bottom: 10px;
+}
+
+li, .form-check {
+    margin: 5px;
+}
+
+h1, h2, ul, ol {
+    text-align: center;
+}
+
+h1 {
+    background-color: green;
+    color: white;
+}
+
+/* the timer in the upper right corner */
+#timer {
+    text-align: right;
+    font-size: x-large;
+    color: white;
+}
+
+#timeRemainingDisplay {
+    
+}
+
+#initials-input {
+    width: 40px;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Boostrap needs this to be mobile responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- tells the browser what goes in the tab -->
+    <title>Code Quiz</title>
+    <!-- Access Bootstrap  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- custom css made by me  -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- the menu at the start -->
+    <section class="container" id="start-menu">
+        <header><h1>Test Your JavaScript Coding Knowledge</h1></header>
+        <h2>High Scores</h2>
+
+        <!-- gotta do this nonsense the center the list  -->
+        <div class="row">
+            <div class="col-5"></div>
+            <!-- displays the top 10 scores  -->
+            <ol class="col-2" id="list-of-high-scores"></ol>
+            <div class="col-5"></div>
+        </div>
+        
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <ul>
+                    <li>You start with 90 seconds to complete the quiz</li>
+                    <li>Correct answers grant 5 seconds to the timer</li>
+                    <li>Incorrect answers remove 5 seconds from the timer</li>
+                    <li>The timer is paused after answering a question, and restarts when you go to the next one</li>
+                    <li>If the timer reaches 0, the quiz ends</li>
+                    <li>Earn points for each correct answer, and any time left on the timer</li>
+                    <li>The Top 10 high scores will be displayed</li>
+                </ul>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        
+        <!-- Start Button -->
+        <div class="row"><div class="col-5"></div><button class="col-2 btn btn-primary" id="start-button">Take the Quiz</button><div class="col-5"></div></div>
+    </section>
+
+    <!-- the Quiz -->
+    <section class="container" id="quizElements">
+        <!-- the timer  -->
+        <div id="timer">Seconds Remaining: <span id="timeRemainingDisplay">90</span></div>
+
+        <!-- displays the question  -->
+        <h3 id="questionDisplay">Question Area</h3>
+
+        <!-- multiple choice buttons -->
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="multipleChoiceField" id="buttonOne" value="1">
+            <label class="form-check-label" id="answerOne">
+                First Answer
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="multipleChoiceField" id="buttonTwo" value="2">
+            <label class="form-check-label" id="answerTwo">
+                Second Answer
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="multipleChoiceField" id="buttonThree" value="3">
+            <label class="form-check-label" id="answerThree">
+                Third Answer
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="multipleChoiceField" id="buttonFour" value="4">
+            <label class="form-check-label" id="answerFour">
+                Fourth Answer
+            </label>
+        </div>
+
+        <!-- reveal whether they got the answer right -->
+        <div class="alert" role="alert" id="answerReveal">
+            This is a primary alert—check it out!
+        </div>
+
+        <!-- press to move on to the next question -->
+        <button type="button" class="btn btn-primary" id="nextQuestionButton">Next Question</button>
+    </section>
+
+    <!-- results screen -->
+    <section class="container" id="results-screen">
+        <h1>Results</h1>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <ul class=>
+                    <li>Correct Answers: <span id="number-of-correct">#</span> (x10)</li>
+                    <li>Time Remaining: <span id="final-time-remaining">#</span></li>
+                    <li>Final Score: <span id="final-score-display">#</span></li>
+                </ul>
+        
+                <div id="initials-input-holder">
+                    You made the Top 10!<br>
+                    Enter initials <input type="text" id="initials-input" maxlength="3"> <button id="accept-initial-input-button">Done</button>
+                </div>
+                
+                <button class="btn btn-primary" id="return-to-main-menu-button">Back to Main Menu</button>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
